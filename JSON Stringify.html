@@ -1,0 +1,35 @@
+<!-- A common use of JSON is to exchange data to/from a web server.
+
+When sending data to a web server, the data has to be a string.
+
+Convert a JavaScript object into a string with JSON.stringify(). -->
+
+<!-- Stringify a JavaScript Object-->
+
+<!-- Imagine we have this object in JavaScript:
+
+const obj = {name: "John", age: 30, city: "New York"};
+
+Use the JavaScript function JSON.stringify() to convert it into a string.
+
+const myJSON = JSON.stringify(obj); -->
+
+The result will be a string following the JSON notation.
+
+myJSON is now a string, and ready to be sent to a server: -->
+
+Example
+<html>
+<body>
+
+<h2>Create a JSON string from a JavaScript object.</h2>
+<p id="demo"></p>
+
+<script>
+const obj = {name: "John", age: 30, city: "New York"};
+const myJSON = JSON.stringify(obj);
+document.getElementById("demo").innerHTML = myJSON;
+</script>
+
+</body>
+</html>

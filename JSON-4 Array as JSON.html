@@ -1,0 +1,44 @@
+<!-- so json.parse ()
+     actually work in two ways
+    1. it can convert a string into jason object if it is an json structure
+    2. but if it is in an array structure it will convert string into an json array and not in json object -->
+
+    <!-- example -->
+    <!-- 
+> let arr = ['A', 'B', 'C']    {this an array}
+< undefined
+> let arr = '["A", "B", "C"]'  {this an string}
+< undefined
+> arr
+< '["A", "B", "C"]'             {this is an string}  example 2 
+> JSON.parse(arr)
+< (3) ['A', 'B', 'C']           {we will get array back}
+     -->
+
+
+
+<!-- 
+Array as JSON
+When using the JSON.parse() on a JSON derived from an array, the method will return a JavaScript array, instead of a JavaScript object.
+
+Example
+const text = '["Ford", "BMW", "Audi", "Fiat"]';
+const myArr = JSON.parse(text);
+ -->
+
+ <!DOCTYPE html>
+ <html>
+ <body>
+ 
+ <h2>Parsing a JSON Array.</h2>
+ <p>Data written as an JSON array will be parsed into a JavaScript array.</p>
+ <p id="demo"></p>
+ 
+ <script>
+ const text = '[ "Ford", "BMW", "Audi", "Fiat" ]';
+ const myArr = JSON.parse(text);
+ document.getElementById("demo").innerHTML = myArr[0];
+ </script>
+ 
+ </body>
+ </html>

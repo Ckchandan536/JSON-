@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width">
+                <title>JSON</title>
+    </head>
+    <body>
+        <h2>JSON</h2>
+        <!-- 
+
+Converting a JSON Text to a JavaScript Object
+A common use of JSON is to read data from a web server, and display the data in a web page.
+
+For simplicity, this can be demonstrated using a string as input.
+
+First, create a JavaScript string containing JSON syntax:
+
+let text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+Then, use the JavaScript built-in function JSON.parse() to convert the string into a JavaScript object:
+
+const obj = JSON.parse(text);
+         -->
+        <p id="demo"></p>
+        <p id="demo-1"></p>
+            <script> 
+            /* 
+This is a JSON string:
+'{"name":"John", "age":30, "car":null}'
+   key    values
+
+
+Inside the JSON string there is a JSON object literal:
+{"name":"John", "age":30, "car":null}
+JSON object literals are surrounded by curly braces {}
+
+JSON object literals contains key/value pairs.
+
+Keys and values are separated by a colon.
+            */
+
+// It is a common mistake to call a JSON object literal "a JSON object".
+//JSON cannot be an object. JSON is a string format.
+//The data is only JSON when it is in a string format. When it is converted to a JavaScript variable, it becomes a JavaScript object.
+                            // string-->  '{}'
+            const myDetails = '{"name":"Prem", "age":50, "car":"Creta"}'; //string
+            const object = JSON.parse(myDetails); // convert it into object
+             document.getElementById("demo").innerHTML = object.car;
+             document.getElementById("demo-1").innerHTML = object["car"];
+             document.write(object["car"]);
+             </script>
+    </body>
+    <!-- 
+    JavaScript Objects
+You can create a JavaScript object from a JSON object literal:
+Example
+myObj = {"name":"John", "age":30, "car":null};
+
+JavaScript Objects
+You can create a JavaScript object from a JSON object literal:
+Example
+myObj = {"name":"John", "age":30, "car":null};
+
+
+Accessing Object Values
+You can access object values by using dot (.) notation:
+
+Example
+const myJSON = '{"name":"John", "age":30, "car":null}';
+const myObj = JSON.parse(myJSON);
+x = myObj.name;
+You can also access object values by using bracket ([]) notation:
+
+
+     -->
+
+    </html>
